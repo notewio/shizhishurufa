@@ -71,6 +71,13 @@ p & v::
   Return
 
 #If Even = 0
+
+n & u::
+u & n::
+  Send {o}
+  Even := 1
+  Return
+
 q::
   Send {x}
   Even := 1

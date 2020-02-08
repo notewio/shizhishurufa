@@ -3,3 +3,6 @@ essentially ASETNIOP for chinese inputting, functions like shuangpin where one k
 
 ## How to use
 Enable pinyin input, switch to shuangpin/double pinyin, run ahk file
+
+## Layout
+![layout image](layout.png)
