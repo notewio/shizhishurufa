@@ -1,4 +1,7 @@
-Even := 0
+Even := 1
+; 0: out of dialog
+; 1: in dialog, even
+; 2: in dialog, odd
 
 ; Toggle suspend
 ^!s:: Suspend
@@ -11,7 +14,10 @@ n::
 n & r::
 r & n::
   Send {BackSpace}
-  If (Even = 0) {
+  If (Even = 1) {
+    Even := 2
+  }
+  Else If (Even = 2) {
     Even := 1
   }
   Else {
@@ -70,255 +76,255 @@ p & v::
   Send {.}
   Return
 
-#If Even = 0
+#If Even = 0 or Even = 1
 
 n & u::
 u & n::
   Send {o}
-  Even := 1
+  Even := 2
   Return
 
 q::
   Send {x}
-  Even := 1
+  Even := 2
   Return
 w::
   Send {j}
-  Even := 1
+  Even := 2
   Return
 e::
   Send {v}
-  Even := 1
+  Even := 2
   Return
 r::
   Send {d}
-  Even := 1
+  Even := 2
   Return
 
 u::
   Send {y}
-  Even := 1
+  Even := 2
   Return
 i::
   Send {u}
-  Even := 1
+  Even := 2
   Return
 o::
   Send {l}
-  Even := 1
+  Even := 2
   Return
 p::
   Send {b}
-  Even := 1
+  Even := 2
   Return
 
 
 r & u::
 u & r::
   Send {h}
-  Even := 1
+  Even := 2
   Return
 r & e::
 e & r::
   Send {g}
-  Even := 1
+  Even := 2
   Return
 i & u::
 u & i::
   Send {w}
-  Even := 1
+  Even := 2
   Return
 r & i::
 i & r::
   Send {t}
-  Even := 1
+  Even := 2
   Return
 e & u::
 u & e::
   Send {z}
-  Even := 1
+  Even := 2
   Return
 i & o::
 o & i::
   Send {m}
-  Even := 1
+  Even := 2
   Return
 e & w::
 w & e::
   Send {q}
-  Even := 1
+  Even := 2
   Return
 e & i::
 i & e::
   Send {i}
-  Even := 1
+  Even := 2
   Return
 r & w::
 w & r::
   Send {r}
-  Even := 1
+  Even := 2
   Return
 o & u::
 u & o::
   Send {s}
-  Even := 1
+  Even := 2
   Return
 u & p::
 p & u::
   Send {k}
-  Even := 1
+  Even := 2
   Return
 r & q::
 q & r::
   Send {c}
-  Even := 1
+  Even := 2
   Return
 w & o::
 o & w::
   Send {n}
-  Even := 1
+  Even := 2
   Return
 q & w::
 w & q::
   Send {f}
-  Even := 1
+  Even := 2
   Return
 p & o::
 o & p::
   Send {p}
-  Even := 1
+  Even := 2
   Return
 
 
 
-#If Even != 0
+#If Even = 2
 q::
   Send {m}
-  Even := 0
+  Even := 1
   Return
 w::
   Send {s}
-  Even := 0
+  Even := 1
   Return
 e::
   Send {j}
-  Even := 0
+  Even := 1
   Return
 r::
   Send {i}
-  Even := 0
+  Even := 1
   Return
 
 u::
   Send {e}
-  Even := 0
+  Even := 1
   Return
 i::
   Send {u}
-  Even := 0
+  Even := 1
   Return
 o::
   Send {a}
-  Even := 0
+  Even := 1
   Return
 p::
   Send {f}
-  Even := 0
+  Even := 1
   Return
 
 
 r & u::
 u & r::
   Send {l}
-  Even := 0
+  Even := 1
   Return
 r & e::
 e & r::
   Send {b}
-  Even := 0
+  Even := 1
   Return
 i & u::
 u & i::
   Send {h}
-  Even := 0
+  Even := 1
   Return
 r & i::
 i & r::
   Send {r}
-  Even := 0
+  Even := 1
   Return
 e & u::
 u & e::
   Send {d}
-  Even := 0
+  Even := 1
   Return
 i & o::
 o & i::
   Send {k}
-  Even := 0
+  Even := 1
   Return
 e & w::
 w & e::
   Send {o}
-  Even := 0
+  Even := 1
   Return
 e & i::
 i & e::
   Send {`;}
-  Even := 0
+  Even := 1
   Return
 r & w::
 w & r::
   Send {g}
-  Even := 0
+  Even := 1
   Return
 o & u::
 u & o::
   Send {n}
-  Even := 0
+  Even := 1
   Return
 u & p::
 p & u::
   Send {z}
-  Even := 0
+  Even := 1
   Return
 r & q::
 q & r::
   Send {x}
-  Even := 0
+  Even := 1
   Return
 w & o::
 o & w::
   Send {w}
-  Even := 0
+  Even := 1
   Return
 q & w::
 w & q::
   Send {c}
-  Even := 0
+  Even := 1
   Return
 p & o::
 o & p::
   Send {v}
-  Even := 0
+  Even := 1
   Return
 e & o::
 o & e::
   Send {q}
-  Even := 0
+  Even := 1
   Return
 w & i::
 i & w::
   Send {p}
-  Even := 0
+  Even := 1
   Return
 q & e::
 e & q::
   Send {y}
-  Even := 0
+  Even := 1
   Return
 p & i::
 i & p::
   Send {t}
-  Even := 0
+  Even := 1
   Return
